@@ -249,8 +249,9 @@ agents = [
         add_files: tini_and_gosu_add_file_meta,
         create_user_and_group: create_user_and_group_cmd,
         before_install: [
+            'yum install -y https://centos6.iuscommunity.org/ius-release.rpm',
             'yum update -y',
-            'yum install -y java-1.8.0-openjdk-headless git mercurial subversion openssh-clients bash unzip curl',
+            'yum install -y java-1.8.0-openjdk-headless git2u-core mercurial subversion openssh-clients bash unzip curl',
             'yum clean all'
         ]
     },
@@ -262,8 +263,9 @@ agents = [
         add_files: tini_and_gosu_add_file_meta,
         create_user_and_group: create_user_and_group_cmd,
         before_install: [
+            'yum install -y https://centos7.iuscommunity.org/ius-release.rpm',
             'yum update -y',
-            'yum install -y java-1.8.0-openjdk-headless git mercurial subversion openssh-clients bash unzip curl',
+            'yum install -y java-1.8.0-openjdk-headless git2u-core mercurial subversion openssh-clients bash unzip curl',
             'yum clean all'
         ]
     }
